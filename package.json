@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "compile": "sass styles/default.scss dist/default.qss --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

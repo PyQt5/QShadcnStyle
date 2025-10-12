@@ -1,0 +1,19 @@
+QPushButton {
+    font-weight: $--font-weight-medium;
+    font-size: $--text-sm;
+    padding: $--spacing * 2 $--spacing * 4;
+    background-color: $--background;
+    border: 1px solid $--border;
+    border-radius: $--radius - 2;
+
+    &:hover {
+        color: $--accent-foreground;
+        background-color: $--accent;
+    }
+
+    &:default {
+        border: 1px solid $--primary;
+        color: $--primary-foreground;
+        background-color: $--primary;
+    }
+}
