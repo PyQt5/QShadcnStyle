@@ -1,19 +1,111 @@
+@use 'sass:color';
+
 QPushButton {
     font-weight: $--font-weight-medium;
     font-size: $--text-sm;
     padding: $--spacing * 2 $--spacing * 4;
+    color: $--color-black;
     background-color: $--background;
     border: 1px solid $--border;
     border-radius: $--radius - 2;
+
+    &:disabled {
+        border-color: color.scale($--border, $red: 50%, $green: 50%, $blue: 50%);
+    }
 
     &:hover {
         color: $--accent-foreground;
         background-color: $--accent;
     }
 
+    &:pressed {
+        color: color.scale($--accent-foreground, $red: 20%, $green: 20%, $blue: 20%);
+        border-color: color.scale($--border, $red: 20%, $green: 20%, $blue: 20%);
+        background-color: color.scale($--background, $red: 20%, $green: 20%, $blue: 20%);
+    }
+
     &:default {
         border: 1px solid $--primary;
         color: $--primary-foreground;
         background-color: $--primary;
+
+        &:disabled {
+            color: color.scale($--primary-foreground, $red: 50%, $green: 50%, $blue: 50%);
+            border-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+            background-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+        }
+
+        &:hover {
+            background-color: color.mix($--primary, transparent, $weight: 90%, $method: rgb);
+        }
+
+        &:pressed {
+            color: color.scale($--primary-foreground, $red: 20%, $green: 20%, $blue: 20%);
+            border-color: color.scale($--primary, $red: 20%, $green: 20%, $blue: 20%);
+            background-color: color.scale($--primary, $red: 20%, $green: 20%, $blue: 20%);
+        }
+    }
+
+    &:flat {
+        border-width: 0px;
+        color: $--color-black;
+        background-color: transparent;
+
+        &:hover {
+            color: $--accent-foreground;
+            background-color: $--accent;
+        }
+
+        &:pressed {
+            color: color.scale($--accent-foreground, $red: 20%, $green: 20%, $blue: 20%);
+            background-color: color.scale($--accent, $red: 20%, $green: 20%, $blue: 20%);
+        }
+    }
+
+    &[variant=link] {
+        border-width: 0px;
+        border-radius: 0px;
+        color: $--primary;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:pressed {
+            color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+        }
+    }
+
+    &[variant=secondary] {
+        border-width: 0px;
+        color: $--secondary-foreground;
+        background-color: $--secondary;
+
+        &:disabled {
+            color: color.scale($--secondary-foreground, $red: 50%, $green: 50%, $blue: 50%);
+            background-color: color.scale($--secondary, $red: 50%, $green: 50%, $blue: 50%);
+        }
+
+        &:pressed {
+            color: color.scale($--secondary-foreground, $red: 20%, $green: 20%, $blue: 20%);
+            background-color: color.scale($--secondary, $red: 20%, $green: 20%, $blue: 20%);
+        }
+    }
+
+    &[variant=destructive] {
+        border-width: 0px;
+        color: $--color-white;
+        background-color: $--destructive;
+
+        &:disabled {
+            color: color.scale($--color-white, $red: 50%, $green: 50%, $blue: 50%);
+            background-color: color.scale($--destructive, $red: 50%, $green: 50%, $blue: 50%);
+        }
+
+        &:pressed {
+            color: color.scale($--color-white, $red: 20%, $green: 20%, $blue: 20%);
+            background-color: color.scale($--destructive, $red: 20%, $green: 20%, $blue: 20%);
+        }
     }
 }
