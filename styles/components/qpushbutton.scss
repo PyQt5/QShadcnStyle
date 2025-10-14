@@ -4,10 +4,10 @@ QPushButton {
     font-weight: $--font-weight-medium;
     font-size: $--text-sm;
     padding: $--spacing * 2 $--spacing * 4;
-    color: $--color-black;
-    background-color: $--background;
     border: 1px solid $--border;
     border-radius: $--radius - 2;
+    color: $--color-black;
+    background-color: $--background;
 
     &:disabled {
         border-color: color.scale($--border, $red: 50%, $green: 50%, $blue: 50%);

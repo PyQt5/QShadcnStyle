@@ -1,0 +1,21 @@
+@use 'sass:color';
+
+QLineEdit {
+    font-size: $--text-base;
+    padding: $--spacing $--spacing * 3;
+    border: 1px solid $--input;
+    border-radius: $--radius - 2;
+    background-color: transparent;
+    selection-color: $--primary-foreground;
+    selection-background-color: $--primary;
+
+    &:disabled {
+        border-color: color.scale($--input, $red: 50%, $green: 50%, $blue: 50%);
+        selection-color: color.scale($--primary-foreground, $red: 50%, $green: 50%, $blue: 50%);
+        selection-background-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+    }
+
+    &:focus {
+        border-color: $--ring;
+    }
+}
