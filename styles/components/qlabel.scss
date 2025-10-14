@@ -1,0 +1,32 @@
+QLabel[class*=Badge],
+QLabel[objectName*=Badge] {
+    font-size: $--text-xs;
+    font-weight: $--font-weight-medium;
+    padding: calc($--spacing / 2) calc($--spacing * 2);
+    border: 1px solid transparent;
+    border-radius: calc($--radius - 2px);
+    color: $--primary-foreground;
+    background-color: $--primary;
+
+    &[variant=secondary] {
+        color: $--secondary-foreground;
+        background-color: $--secondary;
+    }
+
+    &[variant=destructive] {
+        color: $--color-white;
+        background-color: $--destructive;
+    }
+
+    &[variant=outline] {
+        color: $--foreground;
+        border-color: $--border;
+        background-color: transparent;
+    }
+
+    &[variant=flat] {
+        color: $--foreground;
+        border-color: transparent;
+        background-color: transparent;
+    }
+}

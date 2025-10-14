@@ -3,9 +3,9 @@
 QPushButton {
     font-weight: $--font-weight-medium;
     font-size: $--text-sm;
-    padding: $--spacing * 2 $--spacing * 4;
+    padding: calc($--spacing * 2) calc($--spacing * 4);
     border: 1px solid $--border;
-    border-radius: $--radius - 2;
+    border-radius: calc($--radius - 2px);
     color: $--color-black;
     background-color: $--background;
 
