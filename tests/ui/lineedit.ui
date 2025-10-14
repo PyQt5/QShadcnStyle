@@ -27,19 +27,78 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit_3">
-     <property name="text">
-      <string>test</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="enabled">
       <bool>false</bool>
      </property>
      <property name="text">
       <string>disabled</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_6">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="text">
+      <string>clear button</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_5">
+     <property name="text">
+      <string>password</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_7">
+     <property name="text">
+      <string>flat</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>flat</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_8">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>flat disabled</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>flat</string>
      </property>
     </widget>
    </item>

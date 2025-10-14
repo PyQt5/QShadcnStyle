@@ -8,6 +8,7 @@ QLineEdit {
     background-color: transparent;
     selection-color: $--primary-foreground;
     selection-background-color: $--primary;
+    // lineedit-password-character: 42;
 
     &:disabled {
         border-color: color.scale($--input, $red: 50%, $green: 50%, $blue: 50%);
@@ -17,5 +18,20 @@ QLineEdit {
 
     &:focus {
         border-color: $--ring;
+    }
+
+    &[variant=flat] {
+        border-color: transparent;
+        border-radius: 0px;
+
+        &:disabled {
+            border-color: transparent;
+            selection-color: transparent;
+            selection-background-color: transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+        }
     }
 }
