@@ -38,6 +38,11 @@
    </item>
    <item>
     <widget class="QCheckBox" name="checkBox_3">
+     <property name="styleSheet">
+      <string notr="true">#Form {
+	background-color: white;
+}</string>
+     </property>
      <property name="text">
       <string>CheckBox</string>
      </property>
@@ -94,10 +99,43 @@
      </property>
     </widget>
    </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_7">
+     <property name="text">
+      <string>CheckBox</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="color" stdset="0">
+      <string>red</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>red</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_8">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>CheckBox</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="color" stdset="0">
+      <string>red</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>red</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
- <resources>
-  <include location="../../styles/themes/theme.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

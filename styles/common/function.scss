@@ -1,0 +1,74 @@
+@use 'sass:color';
+@use "sass:string";
+
+@import './colors.scss';
+
+
+@function color-scale($color, $scale) {
+    @return color.ie-hex-str(color.scale($color, $red: $scale, $green: $scale, $blue: $scale));
+}
+
+@function property-name($property) {
+    @if $property =="color" {
+        @return "color";
+    }
+
+    @else if $property =="border-color" {
+        @return "bd-color";
+    }
+
+    @else if $property =="background-color" {
+        @return "bg-color";
+    }
+
+    @return "";
+}
+
+@mixin _generate-colors($property: "color", $prop: "", $name: "", $value: "", $hover: true, $pressed: true, $disabled: true) {
+    &[#{$prop}="#{$name}"] {
+        #{$property}: $value;
+
+        @if $disabled {
+            &:disabled {
+                #{$property}: color-scale($value, 50%);
+            }
+        }
+
+        @if $hover {
+            &:hover {
+                #{$property}: color-scale($value, 20%);
+            }
+        }
+
+        @if $pressed {
+            &:pressed {
+                #{$property}: color-scale($value, 30%);
+            }
+        }
+    }
+}
+
+@mixin generate-colors($property: "color", $variant: true, $hover: true, $pressed: true, $disabled: true) {
+
+    $prop: property-name($property);
+
+    @each $name, $value in $__name-colors {
+        @if $variant {
+            @include _generate-colors($property, "variant", $name, $value, $hover, $pressed, $disabled);
+        }
+
+        @include _generate-colors($property, $prop, $name, $value, $hover, $pressed, $disabled);
+    }
+
+    @each $name, $shades in $__colors {
+        @each $weight, $value in $shades {
+            $tname: #{$name}-#{$weight};
+
+            @if $variant {
+                @include _generate-colors($property, "variant", $tname, $value, $hover, $pressed, $disabled);
+            }
+
+            @include _generate-colors($property, $prop, $tname, $value, $hover, $pressed, $disabled);
+        }
+    }
+}

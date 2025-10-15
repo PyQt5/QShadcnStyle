@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use '../common/function.scss' as func;
 
 QLineEdit {
     font-size: $--text-base;
@@ -11,9 +11,13 @@ QLineEdit {
     // lineedit-password-character: 42;
 
     &:disabled {
-        border-color: color.scale($--input, $red: 50%, $green: 50%, $blue: 50%);
-        selection-color: color.scale($--primary-foreground, $red: 50%, $green: 50%, $blue: 50%);
-        selection-background-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+        border-color: func.color-scale($--input, 50%);
+        selection-color: func.color-scale($--primary-foreground, 50%);
+        selection-background-color: func.color-scale($--primary, 50%);
+    }
+
+    &:hover {
+        border-color: func.color-scale($--ring, 20%);
     }
 
     &:focus {

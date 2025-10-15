@@ -1,5 +1,7 @@
-@import './_variables.scss';
-@import './colors.scss';
+@import './common/variables.scss';
+@import './common/colors.scss';
+
 @import './themes/default/default.scss';
 @import './themes/default/icon.scss';
-@import './base.scss'
+
+@import './common/base.scss'

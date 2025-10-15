@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use '../common/function.scss' as func;
 
 QPushButton {
     font-weight: $--font-weight-medium;
@@ -10,7 +11,7 @@ QPushButton {
     background-color: $--background;
 
     &:disabled {
-        border-color: color.scale($--border, $red: 50%, $green: 50%, $blue: 50%);
+        border-color: func.color-scale($--border, 50%);
     }
 
     &:hover {
@@ -19,9 +20,9 @@ QPushButton {
     }
 
     &:pressed {
-        color: color.scale($--accent-foreground, $red: 20%, $green: 20%, $blue: 20%);
-        border-color: color.scale($--border, $red: 20%, $green: 20%, $blue: 20%);
-        background-color: color.scale($--background, $red: 20%, $green: 20%, $blue: 20%);
+        color: func.color-scale($--accent-foreground, 30%);
+        border-color: func.color-scale($--border, 30%);
+        background-color: func.color-scale($--background, 30%);
     }
 
     &:default {
@@ -30,19 +31,19 @@ QPushButton {
         background-color: $--primary;
 
         &:disabled {
-            color: color.scale($--primary-foreground, $red: 50%, $green: 50%, $blue: 50%);
-            border-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
-            background-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+            color: func.color-scale($--primary-foreground, 50%);
+            border-color: func.color-scale($--primary, 50%);
+            background-color: func.color-scale($--primary, 50%);
         }
 
         &:hover {
-            background-color: color.mix($--primary, transparent, $weight: 90%, $method: rgb);
+            background-color: color.ie-hex-str(color.mix($--primary, transparent, $weight: 90%, $method: rgb));
         }
 
         &:pressed {
-            color: color.scale($--primary-foreground, $red: 20%, $green: 20%, $blue: 20%);
-            border-color: color.scale($--primary, $red: 20%, $green: 20%, $blue: 20%);
-            background-color: color.scale($--primary, $red: 20%, $green: 20%, $blue: 20%);
+            color: func.color-scale($--primary-foreground, 30%);
+            border-color: func.color-scale($--primary, 30%);
+            background-color: func.color-scale($--primary, 30%);
         }
     }
 
@@ -57,8 +58,8 @@ QPushButton {
         }
 
         &:pressed {
-            color: color.scale($--accent-foreground, $red: 20%, $green: 20%, $blue: 20%);
-            background-color: color.scale($--accent, $red: 20%, $green: 20%, $blue: 20%);
+            color: func.color-scale($--accent-foreground, 30%);
+            background-color: func.color-scale($--accent, 30%);
         }
     }
 
@@ -73,7 +74,7 @@ QPushButton {
         }
 
         &:pressed {
-            color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+            color: func.color-scale($--primary, 50%);
         }
     }
 
@@ -83,13 +84,18 @@ QPushButton {
         background-color: $--secondary;
 
         &:disabled {
-            color: color.scale($--secondary-foreground, $red: 50%, $green: 50%, $blue: 50%);
-            background-color: color.scale($--secondary, $red: 50%, $green: 50%, $blue: 50%);
+            color: func.color-scale($--secondary-foreground, 50%);
+            background-color: func.color-scale($--secondary, 50%);
+        }
+
+        &:hover {
+            color: func.color-scale($--secondary-foreground, 20%);
+            background-color: func.color-scale($--secondary, 20%);
         }
 
         &:pressed {
-            color: color.scale($--secondary-foreground, $red: 20%, $green: 20%, $blue: 20%);
-            background-color: color.scale($--secondary, $red: 20%, $green: 20%, $blue: 20%);
+            color: func.color-scale($--secondary-foreground, 30%);
+            background-color: func.color-scale($--secondary, 30%);
         }
     }
 
@@ -99,13 +105,18 @@ QPushButton {
         background-color: $--destructive;
 
         &:disabled {
-            color: color.scale($--color-white, $red: 50%, $green: 50%, $blue: 50%);
-            background-color: color.scale($--destructive, $red: 50%, $green: 50%, $blue: 50%);
+            color: func.color-scale($--color-white, 50%);
+            background-color: func.color-scale($--destructive, 50%);
+        }
+
+        &:hover {
+            color: func.color-scale($--color-white, 20%);
+            background-color: func.color-scale($--destructive, 20%);
         }
 
         &:pressed {
-            color: color.scale($--color-white, $red: 20%, $green: 20%, $blue: 20%);
-            background-color: color.scale($--destructive, $red: 20%, $green: 20%, $blue: 20%);
+            color: func.color-scale($--color-white, 30%);
+            background-color: func.color-scale($--destructive, 30%);
         }
     }
 }

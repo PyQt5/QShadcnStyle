@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">#Form {
-	background-color: rgb(255, 255, 255);
+	background-color: white;
 }</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -29,16 +29,26 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QPushButton" name="pushButton_12">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="text">
+      <string>Flat</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="pushButton_11">
      <property name="enabled">
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Secondary</string>
+      <string>Destructive</string>
      </property>
      <property name="variant" stdset="0">
-      <string>secondary</string>
+      <string>destructive</string>
      </property>
     </widget>
    </item>
@@ -52,36 +62,6 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="text">
-      <string>Flat</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_9">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>Default</string>
-     </property>
-     <property name="default">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
    <item row="3" column="0">
     <widget class="QPushButton" name="pushButton_5">
      <property name="text">
@@ -89,19 +69,6 @@
      </property>
      <property name="variant" stdset="0">
       <string>secondary</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1">
-    <widget class="QPushButton" name="pushButton_13">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>Link</string>
-     </property>
-     <property name="variant" stdset="0">
-      <string>link</string>
      </property>
     </widget>
    </item>
@@ -118,6 +85,36 @@
      </property>
     </widget>
    </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="text">
+      <string>Destructive</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>destructive</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Link</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>link</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Normal</string>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="1">
     <widget class="QPushButton" name="pushButton_8">
      <property name="enabled">
@@ -128,8 +125,8 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="1">
-    <widget class="QPushButton" name="pushButton_11">
+   <item row="3" column="1">
+    <widget class="QPushButton" name="pushButton_12">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -137,17 +134,49 @@
       <string>Secondary</string>
      </property>
      <property name="variant" stdset="0">
-      <string>destructive</string>
+      <string>secondary</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="0">
-    <widget class="QPushButton" name="pushButton_4">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="text">
-      <string>Secondary</string>
+      <string>Default</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="text">
+      <string>deepskyblue</string>
      </property>
      <property name="variant" stdset="0">
-      <string>destructive</string>
+      <string>deepskyblue</string>
+     </property>
+     <property name="color" stdset="0">
+      <string>white</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QPushButton" name="pushButton_14">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>deepskyblue</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>deepskyblue</string>
+     </property>
+     <property name="color" stdset="0">
+      <string>white</string>
      </property>
     </widget>
    </item>

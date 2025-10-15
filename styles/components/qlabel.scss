@@ -1,3 +1,5 @@
+@use '../common/function.scss' as func;
+
 QLabel[class*=Badge],
 QLabel[objectName*=Badge] {
     font-size: $--text-xs;
@@ -8,25 +10,50 @@ QLabel[objectName*=Badge] {
     color: $--primary-foreground;
     background-color: $--primary;
 
+    &:hover {
+        color: func.color-scale($--primary-foreground, 20%);
+        background-color: func.color-scale($--primary, 20%);
+    }
+
     &[variant=secondary] {
         color: $--secondary-foreground;
         background-color: $--secondary;
+
+        &:hover {
+            color: func.color-scale($--secondary-foreground, 20%);
+            background-color: func.color-scale($--secondary, 20%);
+        }
     }
 
     &[variant=destructive] {
         color: $--color-white;
         background-color: $--destructive;
+
+        &:hover {
+            color: func.color-scale($--color-white, 20%);
+            background-color: func.color-scale($--destructive, 20%);
+        }
     }
 
     &[variant=outline] {
         color: $--foreground;
         border-color: $--border;
         background-color: transparent;
+
+        &:hover {
+            color: func.color-scale($--foreground, 20%);
+            border-color: func.color-scale($--border, 20%);
+        }
     }
 
     &[variant=flat] {
         color: $--foreground;
         border-color: transparent;
         background-color: transparent;
+
+        &:hover {
+            color: func.color-scale($--foreground, 20%);
+            background-color: $--accent;
+        }
     }
 }

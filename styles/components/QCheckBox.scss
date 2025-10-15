@@ -1,14 +1,6 @@
-@use 'sass:color';
+@use '../common/function.scss' as func;
 
 QCheckBox {
-
-    &[bd-color*=""] {
-        border-color: transparent;
-    }
-
-    &[bg-color*=""] {
-        background-color: transparent;
-    }
 
     &::indicator {
         width: calc($--spacing * 4);
@@ -18,7 +10,7 @@ QCheckBox {
 
         &:unchecked {
             &:disabled {
-                color: color.scale($--input, $red: 50%, $green: 50%, $blue: 50%);
+                color: func.color-scale($--input, 50%);
             }
         }
 
@@ -28,8 +20,18 @@ QCheckBox {
             image: url(:/shadcn/default/icon/check.svg);
 
             &:disabled {
-                border-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
-                background-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+                border-color: func.color-scale($--primary, 50%);
+                background-color: func.color-scale($--primary, 50%);
+            }
+
+            &:hover {
+                border-color: func.color-scale($--primary, 20%);
+                background-color: func.color-scale($--primary, 20%);
+            }
+
+            &:pressed {
+                border-color: func.color-scale($--primary, 30%);
+                background-color: func.color-scale($--primary, 30%);
             }
         }
     }

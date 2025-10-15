@@ -102,6 +102,16 @@
      </property>
     </widget>
    </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit_9">
+     <property name="text">
+      <string>error</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>red</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
