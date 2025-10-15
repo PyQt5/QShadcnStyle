@@ -1,0 +1,36 @@
+@use 'sass:color';
+
+QCheckBox {
+
+    &[bd-color*=""] {
+        border-color: transparent;
+    }
+
+    &[bg-color*=""] {
+        background-color: transparent;
+    }
+
+    &::indicator {
+        width: calc($--spacing * 4);
+        height: calc($--spacing * 4);
+        border: 1px solid $--input;
+        border-radius: 4px;
+
+        &:unchecked {
+            &:disabled {
+                color: color.scale($--input, $red: 50%, $green: 50%, $blue: 50%);
+            }
+        }
+
+        &:checked {
+            border-color: $--primary;
+            background-color: $--primary;
+            image: url(:/shadcn/default/icon/check.svg);
+
+            &:disabled {
+                border-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+                background-color: color.scale($--primary, $red: 50%, $green: 50%, $blue: 50%);
+            }
+        }
+    }
+}
