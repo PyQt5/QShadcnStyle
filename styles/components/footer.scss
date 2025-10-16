@@ -21,3 +21,16 @@ QCheckBox {
         }
     }
 }
+
+QRadioButton {
+    $selector: &;
+
+    @include func.generate-colors("color", true, false, false, true);
+
+    &::indicator {
+        &:checked {
+            @include func.generate-colors("border-color", true, true, true, true);
+            @include func.generate-colors("background-color", true, true, true, true, $selector);
+        }
+    }
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form {
+	background-color: white;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="text">
+      <string>Default</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">buttonGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="text">
+      <string>UnCheck</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">buttonGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="radioButton_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Disabled</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="radioButton_4">
+     <property name="text">
+      <string>Blue</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="bd-color" stdset="0">
+      <string>blue-600</string>
+     </property>
+     <property name="bg-color" stdset="0">
+      <string>blue-600</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">buttonGroup_2</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="radioButton_5">
+     <property name="text">
+      <string>Blue</string>
+     </property>
+     <property name="bd-color" stdset="0">
+      <string>blue-600</string>
+     </property>
+     <property name="bg-color" stdset="0">
+      <string>blue-600</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">buttonGroup_2</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="radioButton_6">
+     <property name="text">
+      <string>Blue</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="variant" stdset="0">
+      <string>deepskyblue</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">buttonGroup_3</string>
+     </attribute>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="radioButton_7">
+     <property name="text">
+      <string>Blue</string>
+     </property>
+     <property name="variant" stdset="0">
+      <string>deepskyblue</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">buttonGroup_3</string>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup_3"/>
+ </buttongroups>
+</ui>

@@ -1,0 +1,39 @@
+@use '../common/function.scss' as func;
+
+QRadioButton {
+
+    &::indicator {
+        width: calc($--spacing * 4);
+        height: calc($--spacing * 4);
+        border: 1px solid $--input;
+        border-radius: calc($--spacing * 2);
+
+        &:unchecked {
+            &:disabled {
+                color: func.color-scale($--input, 50%);
+                border-color: func.color-scale($--input, 50%);
+            }
+        }
+
+        &:checked {
+            $color: rgba(0, 0, 0, 255);
+            background-color: func.generate-radio-color($color, 100%);
+
+
+            &:disabled {
+                border-color: func.color-scale($--input, 50%);
+                background-color: func.generate-radio-color($color, 50%);
+            }
+
+            &:hover {
+                border-color: func.color-scale($--input, 20%);
+                background-color: func.generate-radio-color($color, 20%);
+            }
+
+            &:pressed {
+                border-color: func.color-scale($--input, 30%);
+                background-color: func.generate-radio-color($color, 30%);
+            }
+        }
+    }
+}
