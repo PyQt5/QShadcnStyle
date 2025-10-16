@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "compile": "sass styles/default.scss styles/default.qss --no-source-map"
+    "compile": "sass styles/themes/default/default.scss styles/themes/default/default.qss --no-source-map",
+    "pack": "rcc --binary -o dist/default.qrcdat styles/themes/default/default.qrc"
   },
   "devDependencies": {
     "sass": "^1.93.2"

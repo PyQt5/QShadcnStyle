@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="shadcn">
+    <file>default.qss</file>
+    <file>icon/check.svg</file>
+  </qresource>
+</RCC>

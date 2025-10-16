@@ -17,7 +17,7 @@ QCheckBox {
         &:checked {
             border-color: $--primary;
             background-color: $--primary;
-            image: url(:/shadcn/default/icon/check.svg);
+            image: $--checkbox-icon;
 
             &:disabled {
                 border-color: func.color-scale($--primary, 50%);
