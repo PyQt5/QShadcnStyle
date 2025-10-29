@@ -1,36 +1,65 @@
 @use '../common/function.scss' as func;
 
+// QPushButton,
+// QLabel {
+//     @include func.generate-colors("color", true, true, true, true);
+//     @include func.generate-colors("border-color", true, true, true, true);
+//     @include func.generate-colors("background-color", true, true, true, true);
+// }
+
+// QLineEdit {
+//     @include func.generate-colors("border-color", true, true, true, true);
+// }
+
+// QCheckBox {
+//     @include func.generate-colors("color", true, false, false, true);
+
+//     &::indicator {
+//         &:checked {
+//             @include func.generate-colors("border-color", true, true, true, true);
+//             @include func.generate-colors("background-color", true, true, true, true);
+//         }
+//     }
+// }
+
+// QRadioButton {
+//     $selector: &;
+
+//     @include func.generate-colors("color", true, false, false, true);
+
+//     &::indicator {
+//         &:checked {
+//             @include func.generate-colors("border-color", true, true, true, true);
+//             @include func.generate-colors("background-color", true, true, true, true, $selector);
+//         }
+//     }
+// }
+
 QPushButton,
-QLabel {
-    @include func.generate-colors("color", true, true, true, true);
+QToolButton,
+QGroupBox,
+QStatusBar,
+QToolBar,
+QMenuBar,
+QMenu,
+QLineEdit,
+QComboBox,
+QAbstractSpinBox,
+QAbstractSlider,
+QLabel,
+QLCDNumber,
+QSplitter,
+QStackedWidget,
+QToolBox,
+QAbstractItemView,
+QPlainTextEdit,
+QScrollArea,
+QTextEdit,
+Line,
+QFrame[class=QFrame],
+QRadioButton::indicator,
+QCheckBox::indicator,
+QGroupBox::indicator {
     @include func.generate-colors("border-color", true, true, true, true);
     @include func.generate-colors("background-color", true, true, true, true);
-}
-
-QLineEdit {
-    @include func.generate-colors("border-color", true, true, true, true);
-}
-
-QCheckBox {
-    @include func.generate-colors("color", true, false, false, true);
-
-    &::indicator {
-        &:checked {
-            @include func.generate-colors("border-color", true, true, true, true);
-            @include func.generate-colors("background-color", true, true, true, true);
-        }
-    }
-}
-
-QRadioButton {
-    $selector: &;
-
-    @include func.generate-colors("color", true, false, false, true);
-
-    &::indicator {
-        &:checked {
-            @include func.generate-colors("border-color", true, true, true, true);
-            @include func.generate-colors("background-color", true, true, true, true, $selector);
-        }
-    }
 }
