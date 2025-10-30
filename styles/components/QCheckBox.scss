@@ -1,6 +1,7 @@
 @use '../common/function.scss' as func;
 
-QCheckBox {
+QCheckBox,
+QGroupBox {
 
     &::indicator {
         width: calc($--spacing * 4);

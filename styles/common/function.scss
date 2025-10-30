@@ -6,6 +6,9 @@
 
 @function color-scale($color, $scale, $hexed: true) {
     $ret: color.scale($color, $red: $scale, $green: $scale, $blue: $scale);
+    @if ($scale == 100%) {
+        $ret: $color;
+    }
 
     @if $hexed {
         @return color.ie-hex-str($ret);
